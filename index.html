@@ -17,7 +17,7 @@
   }
   a{color:inherit; text-decoration:none;}
   .container{max-width:1000px; margin:0 auto; padding:0 24px;}
-  section{padding:48px 0;}
+  section{padding:10px 0;}
   header{
     position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.9);
     backdrop-filter:blur(8px); border-bottom:1px solid var(--border);
@@ -34,7 +34,7 @@
   .btn-primary{background:var(--accent); color:#fff; border-color:var(--accent);}
   .btn-ghost{color:var(--text);}
 
-  .hero{padding:56px 0 40px;}
+  .hero{padding:12px 0 8px;}
   .hero-inner{display:grid; grid-template-columns:1fr 220px; gap:36px; align-items:center;}
   .hero .tag{
     display:inline-block; font-size:13px; color:var(--accent); background:var(--accent-soft);
@@ -50,16 +50,14 @@
   .stats .num{font-size:24px; font-weight:700; color:var(--accent);}
   .stats .label{font-size:13px; color:var(--text-secondary);}
   .hero-photo{
-    width:200px; height:200px; border-radius:50%; background:var(--surface2);
-    border:3px solid var(--surface); box-shadow:0 8px 32px rgba(0,0,0,0.08);
-    display:flex; align-items:center; justify-content:center;
-    background-image:url('profile.jpg'); background-size:cover; background-position:center;
-    color:var(--text-secondary); font-size:13px; text-align:center; padding:20px;
+    width:260px; height:320px; border-radius:16px; background:var(--surface2);
+    border:1px solid var(--border); box-shadow:0 8px 32px rgba(0,0,0,0.08);
+    background-image:url('profile.jpg'); background-size:cover; background-position:center top;
     justify-self:center;
   }
 
-  h2.section-title{font-size:24px; font-weight:700; margin-bottom:4px;}
-  p.section-sub{color:var(--text-secondary); margin-bottom:24px; font-size:14px;}
+  h2.section-title{font-size:24px; font-weight:700; margin-bottom:2px;}
+  p.section-sub{color:var(--text-secondary); margin-bottom:12px; font-size:14px;}
 
   .about-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:20px;}
   .about-card{background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:18px;}
@@ -84,10 +82,11 @@
   }
   .exp-item ul li::before{content:'•'; position:absolute; left:0; color:var(--accent);}
 
-  .skills-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px 36px;}
-  .skill-row .top{display:flex; justify-content:space-between; font-size:14px; margin-bottom:6px;}
-  .skill-bar{height:6px; background:var(--surface2); border-radius:4px; overflow:hidden;}
-  .skill-bar .fill{height:100%; background:var(--accent); border-radius:4px;}
+  .skills-tiles{display:flex; flex-wrap:wrap; gap:10px;}
+  .skill-tile{
+    background:var(--surface); border:1px solid var(--border); border-radius:8px;
+    padding:10px 20px; font-size:14px; font-weight:500; color:var(--text);
+  }
 
   .projects-grid{display:grid; gap:18px;}
   .project-card{
@@ -156,13 +155,13 @@
   .contact-links{display:flex; gap:24px; justify-content:center; margin-top:16px; flex-wrap:wrap;}
   .contact-links a{font-size:14px; color:var(--accent); font-weight:600;}
 
-  footer{text-align:center; padding:20px 0; color:var(--text-secondary); font-size:13px; border-top:1px solid var(--border);}
+  footer{text-align:center; padding:10px 0; color:var(--text-secondary); font-size:13px; border-top:1px solid var(--border);}
 
   @media(max-width:800px){
     nav ul{display:none;}
     .hero{padding:60px 0 40px;}
     .hero-inner{grid-template-columns:1fr; gap:32px;}
-    .hero-photo{width:180px; height:180px; order:-1;}
+    .hero-photo{width:180px; height:220px; order:-1;}
     .hero h1{font-size:32px;}
     .skills-grid, .about-grid, .cert-list{grid-template-columns:1fr;}
   }
@@ -267,39 +266,17 @@
   <div class="container">
     <h2 class="section-title">Tools & skills</h2>
     <p class="section-sub">A practical toolkit for turning data into decisions.</p>
-    <div class="skills-grid">
-      <div class="skill-row">
-        <div class="top"><span>Advanced Excel</span><span>90%</span></div>
-        <div class="skill-bar"><div class="fill" style="width:90%"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="top"><span>SQL</span><span>90%</span></div>
-        <div class="skill-bar"><div class="fill" style="width:90%"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="top"><span>Power BI (DAX, Data Modelling)</span><span>85%</span></div>
-        <div class="skill-bar"><div class="fill" style="width:85%"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="top"><span>Python</span><span>75%</span></div>
-        <div class="skill-bar"><div class="fill" style="width:75%"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="top"><span>AI Prompting / Claude Cowork</span><span>85%</span></div>
-        <div class="skill-bar"><div class="fill" style="width:85%"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="top"><span>WordPress CMS</span><span>80%</span></div>
-        <div class="skill-bar"><div class="fill" style="width:80%"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="top"><span>Tableau & R</span><span>70%</span></div>
-        <div class="skill-bar"><div class="fill" style="width:70%"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="top"><span>Research Tools (Nexizo, BidAssist, Apollo.io)</span><span>80%</span></div>
-        <div class="skill-bar"><div class="fill" style="width:80%"></div></div>
-      </div>
+    <div class="skills-tiles">
+      <div class="skill-tile">Advanced Excel</div>
+      <div class="skill-tile">SQL</div>
+      <div class="skill-tile">Power BI</div>
+      <div class="skill-tile">DAX &amp; Data Modelling</div>
+      <div class="skill-tile">Python</div>
+      <div class="skill-tile">MySQL Workbench</div>
+      <div class="skill-tile">WordPress CMS</div>
+      <div class="skill-tile">AI Prompting</div>
+      <div class="skill-tile">Database Management</div>
+      <div class="skill-tile">MIS Reporting</div>
     </div>
   </div>
 </section>
@@ -309,6 +286,43 @@
     <h2 class="section-title">Featured projects</h2>
     <p class="section-sub">Selected analytics and research work that turned raw data into decisions.</p>
     <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="carousel" data-carousel>
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="sql-slide-1.png" alt="Q01 — Monthly Product Sales Report for Croma India FY2021"></div>
+            <div class="carousel-slide"><img src="sql-slide-2.png" alt="Q02 — Monthly Gross Sales for Croma FY2021 with trend chart"></div>
+            <div class="carousel-slide"><img src="sql-slide-3.png" alt="Q02.1 — Reusable stored procedure for any customer monthly gross sales"></div>
+            <div class="carousel-slide"><img src="sql-slide-4.png" alt="Q03 — Market Badge stored procedure classifying Gold vs Silver markets"></div>
+          </div>
+          <button class="carousel-btn prev" aria-label="Previous slide">&#8249;</button>
+          <button class="carousel-btn next" aria-label="Next slide">&#8250;</button>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" aria-label="Slide 1"></button>
+            <button class="carousel-dot" aria-label="Slide 2"></button>
+            <button class="carousel-dot" aria-label="Slide 3"></button>
+            <button class="carousel-dot" aria-label="Slide 4"></button>
+          </div>
+        </div>
+        <div class="meta">SQL · MySQL Workbench · Business Analysis</div>
+        <h3>AtliQ Hardware — Business Insights Using SQL</h3>
+        <p class="desc">AtliQ Hardware sells across retailers, direct channels, and distributors in APAC, EU, NA, and LATAM. As data scaled to millions of records, Excel became unsustainable. This project uses SQL to answer real business questions — from product-level sales reports to reusable stored procedures and market performance classification.</p>
+        <ul class="highlights">
+          <li>Multi-table JOINs across a star schema (dim_product, dim_customer, fact_sales_monthly, fact_gross_price) with custom fiscal year functions</li>
+          <li>Parameterized stored procedures using FIND_IN_SET() to generate reports for any customer without rewriting queries</li>
+          <li>IN/OUT parameter stored procedure with IF/ELSE logic to classify markets as Gold (&gt;5M units) or Silver</li>
+          <li>Documented data-quality observations including 3 missing fiscal months and fixed unit pricing across FY</li>
+        </ul>
+        <div class="kpi-row">
+          <span class="kpi-pill">10,000+ Rows</span>
+          <span class="kpi-pill">Stored Procedures</span>
+          <span class="kpi-pill">Gold/Silver Tiers</span>
+          <span class="kpi-pill">Star Schema</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/vibhamukati" target="_blank" rel="noopener">GitHub →</a>
+        </div>
+      </div>
 
       <div class="project-card">
         <div class="carousel" data-carousel>
